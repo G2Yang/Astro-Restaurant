@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ComentariosController from "../controllers/ComentariosController";
+import Plat from "../components/Plat.astro";
+let comentariosController = new ComentariosController();
+
+let comentarios = await comentariosController.getComentarios();
+let currentUrl = Astro.request.url;
+---
+
+<Layout>
+    <h1>COMENTARIOS</h1>
+    <a
+        class={"btn " +
+            (currentUrl.includes("/menu")
+                ? "btn-secondary"
+                : "btn-outline-secondary")}
+        href="/comentar">Comentar</a
+    >
+    {
+        comentarios.length ? (
+            comentarios.map((comm) => (
+                <>
+                    <div style="border: 1px solid black; padding: 10px; margin: 10px;">
+                        <h1 style="text-decoration: underline;">{comm.Nombre}</h1>
+                        <a style="border: 1px solid black;">{comm.Comentario}</a>
+                    </div>
+                </>
+            ))
+        ) : (
+            <div />
+        )
+    }
+</Layout>
