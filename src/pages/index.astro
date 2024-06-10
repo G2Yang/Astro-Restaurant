@@ -1,13 +1,126 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-
 ---
 
+<style>
+	img {
+		width: 100px;
+		display: inline-block;
+		margin: 5 auto;
+	}
+
+	#textoArriba {
+		justify-content: center;
+		display: flex;
+		align-items: center;
+		padding: 10px;
+		margin: 10px;
+		border: 3px solid black;
+		text-shadow: 1px 1px 1px white
+	}
+
+	h4 {
+		text-decoration: underline;
+		;
+	}
+</style>
 
 <Layout>
+	<div id="textoArriba">
+		<h1>BIENVENIDO A</h1>
+		<img src="/LOGO.png" />
+		<h1>PARA SERVIR</h1>
+	</div>
 
-	<h1>Benvinguts!</h1>
+	<div id="carouselExample" class="carousel slide">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img
+					src="/index_carrousel_images/img1.jpg"
+					class="d-block w-100"
+				/>
+			</div>
+			<div class="carousel-item">
+				<img
+					src="/index_carrousel_images/img2.jpg"
+					class="d-block w-100"
+				/>
+			</div>
+			<div class="carousel-item">
+				<img
+					src="/index_carrousel_images/img3.jpg"
+					class="d-block w-100"
+				/>
+			</div>
+		</div>
+		<button
+			class="carousel-control-prev"
+			type="button"
+			data-bs-target="#carouselExample"
+			data-bs-slide="prev"
+		>
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button
+			class="carousel-control-next"
+			type="button"
+			data-bs-target="#carouselExample"
+			data-bs-slide="next"
+		>
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+	</div>
 
+	<h1
+		style="text-align: center;text-decoration: underline;padding: 10px; border: 3px solid black; margin: 10px;text-shadow: 1px 1px 1px white"
+	>
+		SOBRE NOSOTROS
+	</h1>
+	<div style="display: flex; justify-content: center; flex-wrap: wrap; background-color: gainsboro; border: 3px solid black; margin: 10px; padding: 10px;">
+		<h4>Restaurante ZY: Un Oasis de Tradición y Modernidad</h4>
+		<p>
+			Ubicado en el corazón de la ciudad, el restaurante ZY emerge como un
+			santuario de la cultura japonesa, combinando a la perfección la
+			elegancia tradicional con toques de modernidad vanguardista. Al
+			cruzar la puerta de madera de cedro, los visitantes son
+			transportados a un mundo de serenidad y sofisticación.
+		</p>
 
+		<h4>Ambiente y Decoración:</h4>
+		<p>
+			El interior de ZY está meticulosamente diseñado para ofrecer una
+			experiencia visual y sensorial única. Los paneles de papel shoji,
+			las lámparas de papel washi y los tatamis tejen un entorno acogedor
+			y auténtico. En el centro del restaurante, un jardín zen con un
+			estanque koi y bonsáis en miniatura proporciona una atmósfera de paz
+			y contemplación.
+		</p>
+		<p>
+			El diseño combina la estética wabi-sabi, que celebra la belleza de
+			la imperfección, con detalles contemporáneos, como mesas de mármol
+			pulido y sillas ergonómicas de madera de teca. La iluminación tenue
+			y cálida realza los tonos naturales del lugar, creando un ambiente
+			íntimo y relajante.
+		</p>
+
+		<h4>Gastronomía:</h4>
+		<p>
+			ZY ofrece una carta diversa que celebra los sabores de la cocina
+			japonesa, fusionando técnicas ancestrales con influencias
+			contemporáneas. Los comensales pueden deleitarse con un menú
+			omakase, donde el chef prepara una selección de platos sorprendentes
+			y delicados, utilizando ingredientes frescos y de temporada.
+		</p>
+		<p>
+			Entre los platos estrella se encuentran el sashimi de toro, servido
+			con una delicada salsa ponzu y decorado con flores comestibles, y el
+			ramen de miso negro, con caldo cocido a fuego lento durante 48 horas
+			para lograr una profundidad de sabor incomparable. Los makis
+			innovadores, como el rollo de tempura de langosta con mayonesa de
+			wasabi, son un guiño a la fusión culinaria que define la esencia de
+			ZY.
+		</p>
+	</div>
 </Layout>

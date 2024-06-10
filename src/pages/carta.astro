@@ -14,9 +14,9 @@ let menu = await platController.getCarta()
 <Layout>
 
 	<h1>CARTA</h1>
-
-	{
-		menu.length ? menu.map(plat => <Plat dades={plat} />) : <div></div>
-	}
-
+	<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+		{
+			menu.length ? menu.map(plat => <Plat dades={plat} />) : <div></div>
+		}
+	</div>
 </Layout>

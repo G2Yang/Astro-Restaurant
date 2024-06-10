@@ -2,21 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 
 import PlatController from "../controllers/PlatController";
-import Plat  from "../components/Plat.astro";
+import Plat from "../components/Plat.astro";
 let platController = new PlatController();
 
-let menu = await platController.getMenuSemanal()
-
-
+let menu = await platController.getMenuSemanal();
 ---
 
-
 <Layout>
-
 	<h1>MENU</h1>
-
-	{	
-		menu.length ? menu.map(plat => <Plat dades={plat} />) : <div></div>
-	}
-
+	<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+		{menu.length ? menu.map((plat) => <Plat dades={plat} />) : <div />}
+	</div>
 </Layout>

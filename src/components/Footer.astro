@@ -1,11 +1,16 @@
 ---
 const { title } = Astro.props;
 
-
-let currentUrl = Astro.request.url
+let currentUrl = Astro.request.url;
 ---
 
 <style>
+    footer {
+        background-image: url("/banner.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
     hr {
         margin-top: 200px;
     }
@@ -13,10 +18,14 @@ let currentUrl = Astro.request.url
 
 <footer>
     <div class="container">
-
         <hr />
-        <h1>FOOTER</h1>
-        <a class={"btn " + (currentUrl.includes('/menu') ? "btn-secondary" : "btn-outline-secondary")} href="/comentarios">Comentarios</a>
+        <h1 style="color: white;">FOOTER</h1>
+        <a
+            class={"btn " +
+                (currentUrl.includes("/menu")
+                    ? "btn-secondary"
+                    : "btn-outline-secondary")}
+            href="/comentarios">Comentarios</a
+        >
     </div>
-   
 </footer>

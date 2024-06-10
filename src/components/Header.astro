@@ -6,13 +6,19 @@ let currentUrl = Astro.request.url
 ---
 
 <style>
-header {
-    margin: 20px 0 40px 0;
-}
-div {
+    header {
+        margin: 0px 0 40px 0;
+        padding: 10px;
+        background-color: #dadde3;
+        border: 1px  solid black;
+        background-image: url("/banner.jpg");
+        background-size: cover;
+
+    }
+    div {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
     }
     h1 {
         font-size: 2rem;
@@ -21,12 +27,12 @@ div {
     ul li {
         display: inline-block;
         margin-right: 20px;
+        margin-top: 10px;
     }
 </style>
 <header>
-    <div class="container">
-
-        <h1>{title}</h1>
+    <div>
+        <h1 style="color: white; border: 1px solid white;">ZY EAT</h1>
         <ul>
             <li>
                 <a class={ "btn " + (currentUrl.endsWith('/') ? "btn-secondary" : "btn-outline-secondary")} href="/">Home</a>
@@ -46,6 +52,5 @@ div {
         </ul>
 
     </div>
-    <hr>
 </header>
 
